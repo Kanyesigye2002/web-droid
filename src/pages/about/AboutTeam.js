@@ -57,7 +57,7 @@ const MEMBERS = [
     id: 5,
     name: "Ampumuza Anita",
     role: "Support Team",
-    phoneNumber: '0752331807',
+    phoneNumber: '0702331807',
     avatar: Anitah
   },
   {
