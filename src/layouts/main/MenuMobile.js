@@ -6,10 +6,11 @@ import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
 // material
-import { alpha, styled } from '@mui/material/styles';
-import { Box, List, Link, Drawer, Collapse, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
+import { alpha, styled, useTheme } from '@mui/material/styles';
+import { Box, List, Link, Drawer, Collapse, ListItemText, ListItemIcon, ListItemButton, useMediaQuery } from '@mui/material';
 // components
 import Logo from '../../components/LogoFull';
+import LogoMobile from '../../components/LogoMobileFull';
 import NavSection from '../../components/NavSection';
 import Scrollbar from '../../components/Scrollbar';
 import { MIconButton } from '../../components/@material-extend';
@@ -144,6 +145,9 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
   const [open, setOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.up('md'));
+
   useEffect(() => {
     if (drawerOpen) {
       handleDrawerClose();
@@ -184,7 +188,7 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
       >
         <Scrollbar>
           <Link component={RouterLink} to="/" sx={{ display: 'inline-flex' }}>
-            <Logo sx={{ mx: PADDING, my: 3 }} />
+            {isMobile ? <Logo sx={{ mx: PADDING, my: 3 }} /> : <LogoMobile sx={{ mx: PADDING, my: 3 }} />}
           </Link>
 
           <List disablePadding>

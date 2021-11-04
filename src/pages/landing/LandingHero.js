@@ -129,12 +129,12 @@ export default function LandingHero() {
               </Typography>
             </motion.div>
 
-            <motion.div variants={varFadeInRight}>
+            {isMobile && <motion.div variants={varFadeInRight}>
               <Typography sx={{ color: 'common.white' }}>
                 This is the kick off of your business based on perfectly designed web apps, desktop, mobile and more
                 technology solutions © Web Droid.
               </Typography>
-            </motion.div>
+            </motion.div>}
 
             <Stack
               component={motion.div}

@@ -1,11 +1,12 @@
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 // material
 import { styled, useTheme } from '@mui/material/styles';
-import { Box, Button, AppBar, Toolbar, Container } from '@mui/material';
+import { Box, Button, AppBar, Toolbar, Container, useMediaQuery } from '@mui/material';
 // hooks
 import useOffSetTop from '../../hooks/useOffSetTop';
 // components
 import Logo from '../../components/LogoFull';
+import LogoMobile from '../../components/LogoMobileFull';
 import logo1 from '../../assets/languageIcons/logo-white.svg';
 import { MHidden } from '../../components/@material-extend';
 //
@@ -48,6 +49,10 @@ const ToolbarShadowStyle = styled('div')(({ theme }) => ({
 
 export default function MainNavbar() {
 
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.up('md'));
+
   const isOffset = useOffSetTop(100);
   const { pathname } = useLocation();
   const isHome = pathname === '/' || pathname === '/about-us' || pathname === '/contact-us' || pathname === '/faqs';
@@ -72,7 +77,7 @@ export default function MainNavbar() {
           }}
         >
           <RouterLink to="/">
-            <Logo />
+            {isMobile ? <Logo /> : <LogoMobile />}
           </RouterLink>
           <Box sx={{ flexGrow: 1 }} />
 
