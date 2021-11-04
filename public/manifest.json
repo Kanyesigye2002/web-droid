@@ -1,9 +1,9 @@
 {
   "name": "WebDroid",
   "short_name": "Web Droid",
-  "theme_color": "#b668166",
+  "display": "standalone",
+  "theme_color": "#b66816",
   "background_color": "#161718",
-  "display": "browser",
   "scope": "/",
   "start_url": "/",
   "icons": [

@@ -22,11 +22,12 @@ function Languages() {
   const settings = {
     slidesToShow: 6,
     centerMode: true,
-    arrows: true,
+    arrows: false,
     centerPadding: '0',
     slidesToScroll: 1,
+    infinite: true,
     autoplay: true,
-    speed: 300,
+    speed: 200,
     responsive: [
       {
         breakpoint: 1279,
