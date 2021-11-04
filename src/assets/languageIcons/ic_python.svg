@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.078"/>
+      <stop offset="1" stop-opacity="0.078"/>
+    </linearGradient>
+  </defs>
+  <g id="ic_python" transform="translate(-549 -225)">
+    <g id="Group_7" data-name="Group 7" transform="translate(309 40)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="40" height="40" rx="12" transform="translate(240 185)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="40" height="40" rx="12" transform="translate(240 185)" fill="rgba(97,218,251,0.2)"/>
+    </g>
+    <g id="icons8_python" transform="translate(554.616 229.178)">
+      <path id="Path_36" data-name="Path 36" d="M15.239,5a11.775,11.775,0,0,0-2.157.2c-2.109.367-2.493,1.138-2.493,2.559V9.932h4.932v1.1h-7.5A2.951,2.951,0,0,0,4.91,13.339a9.177,9.177,0,0,0,0,5c.359,1.458,1.15,2.551,2.595,2.551h1.99v-2.8a3.344,3.344,0,0,1,3.158-3.231h3.965a2.633,2.633,0,0,0,2.74-2.4V7.76A2.6,2.6,0,0,0,17.046,5.2,9.324,9.324,0,0,0,15.239,5ZM12.508,7.192a.822.822,0,1,1,0,1.644.822.822,0,1,1,0-1.644Z" transform="translate(0 0)" fill="#0277bd"/>
+      <path id="Path_37" data-name="Path 37" d="M19.68,29.891a11.775,11.775,0,0,0,2.157-.2c2.109-.367,2.493-1.138,2.493-2.559V24.959H19.4v-1.1h7.5a2.951,2.951,0,0,0,3.109-2.312,9.177,9.177,0,0,0,0-5C29.651,15.093,28.86,14,27.415,14h-1.99v2.8a3.344,3.344,0,0,1-3.158,3.231H18.3a2.633,2.633,0,0,0-2.74,2.4v4.7a2.6,2.6,0,0,0,2.311,2.56A9.324,9.324,0,0,0,19.68,29.891ZM22.412,27.7a.822.822,0,1,1,0-1.644.822.822,0,1,1,0,1.644Z" transform="translate(-4.972 -4.068)" fill="#ffc107"/>
+    </g>
+  </g>
+</svg>

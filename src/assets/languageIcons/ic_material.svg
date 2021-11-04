@@ -1,0 +1,21 @@
+<svg id="ic_material" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.078"/>
+      <stop offset="1" stop-opacity="0.078"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_7" data-name="Rectangle 7" width="40" height="40" rx="12" fill="rgba(0,149,213,0.2)"/>
+  <rect id="Rectangle_8" data-name="Rectangle 8" width="40" height="40" rx="12" fill="url(#linear-gradient)"/>
+  <g id="Group_15" data-name="Group 15">
+    <g id="Group_14" data-name="Group 14" transform="translate(10 13)">
+      <path id="Path_46" data-name="Path 46" d="M0,0q3.75,2.182,7.5,4.364c0,.97,0,1.939,0,2.909Q5,5.815,2.5,4.363q0,2.909,0,5.818Q1.251,9.453,0,8.726,0,4.363,0,0Z" fill="#00b0ff"/>
+      <path id="Path_47" data-name="Path 47" d="M7.5,10.185l.007,0c.328.216.678.4,1.014.6.485.278.963.571,1.454.839.849.474,1.683.976,2.526,1.461,0,.97,0,1.939,0,2.909q-2.5-1.457-5-2.91,0-1.453,0-2.905Z" fill="#00b0ff"/>
+      <g id="Group_13" data-name="Group 13">
+        <path id="Path_48" data-name="Path 48" d="M7.5,4.364Q11.25,2.183,15,0q0,4.363,0,8.727l-4.9,2.851c-.041.018-.077.061-.126.051-.491-.268-.969-.561-1.454-.839-.337-.2-.686-.385-1.014-.6.328-.217.68-.4,1.017-.6Q10.512,8.43,12.5,7.273q0-1.454,0-2.908Q10,5.819,7.5,7.273c0-.97,0-1.939,0-2.909Z" fill="#0081cb"/>
+        <path id="Path_49" data-name="Path 49" d="M17.5,1.454C18.335.972,19.166.485,20,0q0,1.455,0,2.909-1.249.727-2.5,1.453,0-1.455,0-2.909Z" fill="#0081cb"/>
+        <path id="Path_50" data-name="Path 50" d="M17.5,7.273q1.25-.727,2.5-1.455,0,2.91,0,5.82-3.75,2.18-7.5,4.362c0-.97,0-1.939,0-2.909q2.5-1.453,5-2.91V7.273Z" fill="#0081cb"/>
+      </g>
+    </g>
+  </g>
+</svg>
