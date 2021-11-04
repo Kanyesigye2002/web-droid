@@ -25,8 +25,8 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
   margin: 'auto',
   textAlign: 'center',
   position: 'relative',
-  paddingTop: theme.spacing(5),
-  paddingBottom: theme.spacing(5),
+  paddingTop: theme.spacing(15),
+  paddingBottom: theme.spacing(15),
   [theme.breakpoints.up('md')]: {
     margin: 'unset',
     textAlign: 'left'
