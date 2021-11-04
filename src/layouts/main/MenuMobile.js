@@ -7,7 +7,7 @@ import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
 // material
 import { alpha, styled, useTheme } from '@mui/material/styles';
-import { Box, List, Link, Drawer, Collapse, ListItemText, ListItemIcon, ListItemButton, useMediaQuery } from '@mui/material';
+import { Box, List, Link, Drawer, Collapse, Grid, ListItemText, ListItemIcon, ListItemButton, useMediaQuery } from '@mui/material';
 // components
 import Logo from '../../components/LogoFull';
 import LogoMobile from '../../components/LogoMobiles';
@@ -187,10 +187,11 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
         PaperProps={{ sx: { pb: 5, width: 260 } }}
       >
         <Scrollbar>
+          <Grid container justifyContent='center'>
           <Link component={RouterLink} to="/" sx={{ display: 'inline-flex' }}>
             {isMobile ? <Logo sx={{ mx: PADDING, my: 3 }} /> : <LogoMobile sx={{ mx: PADDING, my: 3 }} />}
           </Link>
-
+        </Grid>
           <List disablePadding>
             {navConfig.map((link) => (
               <MenuMobileItem key={link.title} item={link} isOpen={open} onOpen={handleOpen} />
