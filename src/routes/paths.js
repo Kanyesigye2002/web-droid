@@ -80,5 +80,3 @@ export const PATH_DASHBOARD = {
     newPost: path(ROOTS_DASHBOARD, '/blog/new-post')
   }
 };
-
-export const PATH_DOCS = 'https://docs-minimals.vercel.app/introduction';

@@ -15,38 +15,57 @@ import instagramFilled from '@iconify/icons-ant-design/instagram-filled';
 import { varFadeIn, varFadeInUp, MotionInView, varFadeInDown } from '../../components/animate';
 import { CarouselControlsArrowsBasic2 } from '../../components/carousel';
 
+import Allan1 from '../../assets/images/members/Allan1.jpg'
+import Anitah from '../../assets/images/members/Anitah.jpg'
+import Enock from '../../assets/images/members/Enock.jpg'
+import Jordan from '../../assets/images/members/Jordan.jpg'
+import Teddy1 from '../../assets/images/members/Teddy1.jpg'
+import mock_avatar from '../../assets/images/members/mock_avatar.jpg'
+
 // ----------------------------------------------------------------------
 
-const MOCK_MEMBERS = [
+const MEMBERS = [
   {
     id: 1,
     name: "Kanyesigye Allan",
     role: "Full Stack Developer",
-    avatar: "/static/mock-images/avatars/avatar_1.jpg"
-  },
-  {
-    id: 5,
-    name: "Philly Banks",
-    role: "Marketing Director",
-    avatar: "/static/mock-images/avatars/avatar_5.jpg"
+    phoneNumber: '0752331807',
+    avatar: Allan1
   },
   {
     id: 2,
-    name: "Mulungi Jordan",
-    role: "UX Designer",
-    avatar: "/static/mock-images/avatars/avatar_2.jpg"
+    name: "Philly Banks",
+    role: "Marketing Director",
+    phoneNumber: '0752331807',
+    avatar: mock_avatar
   },
   {
     id: 3,
-    name: "Twikirize Enock",
-    role: "Production Manager",
-    avatar: "/static/mock-images/avatars/avatar_3.jpg"
+    name: "Mulungi Jordan",
+    role: "UX Designer",
+    phoneNumber: '0752331807',
+    avatar: Jordan
   },
   {
     id: 4,
+    name: "Twikirize Enock",
+    role: "Production Manager",
+    phoneNumber: '0752331807',
+    avatar: Enock
+  },
+  {
+    id: 5,
+    name: "Ampumuza Anita",
+    role: "Support Team",
+    phoneNumber: '0752331807',
+    avatar: Anitah
+  },
+  {
+    id: 6,
     name: "Teddy",
     role: "Marketing Team",
-    avatar: "/static/mock-images/avatars/avatar_4.jpg"
+    phoneNumber: '0752331807',
+    avatar: Teddy1
   },
 ]
 
@@ -145,7 +164,7 @@ export default function AboutTeam() {
 
       <Box sx={{ position: 'relative' }}>
         <Slider ref={carouselRef} {...settings}>
-          {MOCK_MEMBERS.map((member) => (
+          {MEMBERS.map((member) => (
             <MotionInView key={member.id} variants={varFadeIn}>
               <MemberCard member={member} />
             </MotionInView>

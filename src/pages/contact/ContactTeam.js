@@ -8,91 +8,59 @@ import { Box, Container, useMediaQuery } from '@mui/material';
 import { varFadeIn } from '../../components/animate';
 import { CarouselControlsArrowsBasic2 } from '../../components/carousel';
 import UserCard from './UserCard';
+import Allan1 from '../../assets/images/members/Allan1.jpg';
+import mock_avatar from '../../assets/images/members/mock_avatar.jpg';
+import Jordan from '../../assets/images/members/Jordan.jpg';
+import Enock from '../../assets/images/members/Enock.jpg';
+import Anitah from '../../assets/images/members/Anitah.jpg';
+import Teddy1 from '../../assets/images/members/Teddy1.jpg';
 
 // ----------------------------------------------------------------------
 
-const users = [
+const MEMBERS = [
   {
-    'id': 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1',
-    'avatarUrl': '/static/mock-images/avatars/avatar_1.jpg',
-    'cover': '/static/mock-images/covers/cover_1.jpg',
-    'name': 'Jayvion Simon',
-    'phoneNumber': '0752331807',
-    'position': 'UX Designer'
+    id: 1,
+    name: "Kanyesigye Allan",
+    role: "Full Stack Developer",
+    phoneNumber: '0752331807',
+    avatar: Allan1
   },
   {
-    'id': 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b2',
-    'avatarUrl': '/static/mock-images/avatars/avatar_2.jpg',
-    'cover': '/static/mock-images/covers/cover_2.jpg',
-    'name': 'Lucian Obrien',
-    'phoneNumber': '0752331807',
-    'position': 'Full Stack Designer'
+    id: 2,
+    name: "Philly Banks",
+    role: "Marketing Director",
+    phoneNumber: '0752331807',
+    avatar: mock_avatar
   },
   {
-    'id': 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b3',
-    'avatarUrl': '/static/mock-images/avatars/avatar_3.jpg',
-    'cover': '/static/mock-images/covers/cover_3.jpg',
-    'name': 'Deja Brady',
-    'phoneNumber': '0752331807',
-    'position': 'Backend Developer'
+    id: 3,
+    name: "Mulungi Jordan",
+    role: "UX Designer",
+    phoneNumber: '0752331807',
+    avatar: Jordan
   },
   {
-    'id': 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b4',
-    'avatarUrl': '/static/mock-images/avatars/avatar_4.jpg',
-    'cover': '/static/mock-images/covers/cover_4.jpg',
-    'name': 'Harrison Stein',
-    'phoneNumber': '0752331807',
-    'position': 'UX Designer'
+    id: 4,
+    name: "Twikirize Enock",
+    role: "Production Manager",
+    phoneNumber: '0752331807',
+    avatar: Enock
   },
   {
-    'id': 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b5',
-    'avatarUrl': '/static/mock-images/avatars/avatar_5.jpg',
-    'cover': '/static/mock-images/covers/cover_5.jpg',
-    'name': 'Reece Chung',
-    'phoneNumber': '0752331807',
-    'position': 'UX Designer'
+    id: 5,
+    name: "Ampumuza Anita",
+    role: "Support Team",
+    phoneNumber: '0752331807',
+    avatar: Anitah
   },
   {
-    'id': 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b6',
-    'avatarUrl': '/static/mock-images/avatars/avatar_6.jpg',
-    'cover': '/static/mock-images/covers/cover_6.jpg',
-    'name': 'Lainey Davidson',
-    'phoneNumber': '0752331807',
-    'position': 'Project Manager'
+    id: 6,
+    name: "Teddy",
+    role: "Marketing Team",
+    phoneNumber: '0752331807',
+    avatar: Teddy1
   },
-  {
-    'id': 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b7',
-    'avatarUrl': '/static/mock-images/avatars/avatar_7.jpg',
-    'cover': '/static/mock-images/covers/cover_7.jpg',
-    'name': 'Cristopher Cardenas',
-    'phoneNumber': '0752331807',
-    'position': 'Leader'
-  },
-  {
-    'id': 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b8',
-    'avatarUrl': '/static/mock-images/avatars/avatar_8.jpg',
-    'cover': '/static/mock-images/covers/cover_8.jpg',
-    'name': 'Melanie Noble',
-    'phoneNumber': '0752331807',
-    'position': 'Backend Developer'
-  },
-  {
-    'id': 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b9',
-    'avatarUrl': '/static/mock-images/avatars/avatar_9.jpg',
-    'cover': '/static/mock-images/covers/cover_9.jpg',
-    'name': 'Chase Day',
-    'phoneNumber': '0752331807',
-    'position': 'Project Manager'
-  },
-  {
-    'id': 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b10',
-    'avatarUrl': '/static/mock-images/avatars/avatar_10.jpg',
-    'cover': '/static/mock-images/covers/cover_10.jpg',
-    'name': 'Shawn Manning',
-    'phoneNumber': '0752331807',
-    'position': 'UI Designer'
-  }
-];
+]
 
 export default function AboutTeam() {
   const carouselRef = useRef();
@@ -123,7 +91,7 @@ export default function AboutTeam() {
   return (
     <Box sx={{ position: 'relative' }}>
       <Slider ref={carouselRef} {...settings}>
-        {users.map((user) => (
+        {MEMBERS.map((user) => (
           <Container key={user.id} variants={varFadeIn} sx={{ maxWidth: 300 }}>
             <UserCard user={user} />
           </Container>

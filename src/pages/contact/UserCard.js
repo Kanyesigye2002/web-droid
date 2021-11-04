@@ -63,7 +63,7 @@ UserCard.propTypes = {
 };
 
 export default function UserCard({ user, ...other }) {
-  const { name, position, phoneNumber, avatarUrl } = user;
+  const { name, role, phoneNumber, avatar } = user;
   return (<>
     <Card {...other}>
       <CardMediaStyle>
@@ -80,7 +80,7 @@ export default function UserCard({ user, ...other }) {
         />
         <Avatar
           alt={name}
-          src={avatarUrl}
+          src={avatar}
           sx={{
             width: 64,
             height: 64,
@@ -94,7 +94,7 @@ export default function UserCard({ user, ...other }) {
         {name}
       </Typography>
       <Typography variant='body2' align='center' sx={{ color: 'text.secondary' }}>
-        {position}
+        {role}
       </Typography>
       <Box sx={{ textAlign: 'center', mt: 1, mb: 1 }}>
         {SOCIALS.map((social) => (

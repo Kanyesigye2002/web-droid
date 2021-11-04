@@ -22,7 +22,7 @@ const SOCIALS = [
 
 const LINKS = [
   {
-    headline: 'Minimal',
+    headline: 'Web Droid',
     children: [
       { name: 'Home', href: '/' },
       { name: 'About us', href: '/about-us' },

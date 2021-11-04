@@ -7,6 +7,7 @@ import { varFadeInDown, varFadeInUp, MotionInView } from '../../components/anima
 
 import Lottie from 'react-lottie';
 import animationData from '../../lotties/data-in-move.json';
+import { Link as RouterLink } from 'react-router-dom';
 
 // ----------------------------------------------------------------------
 
@@ -70,8 +71,8 @@ export default function LandingAdvertisement() {
             <Button
               size="large"
               variant="contained"
-              target="_blank"
-              href="https://material-ui.com/store/items/minimal-dashboard/"
+              component={RouterLink}
+              to={'/contact-us'}
               sx={{
                 whiteSpace: 'nowrap',
                 boxShadow: (theme) => theme.customShadows.z8,

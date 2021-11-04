@@ -3,7 +3,7 @@
   "short_name": "Web Droid",
   "display": "standalone",
   "theme_color": "#b66816",
-  "background_color": "#161718",
+  "background_color": "#b66816",
   "scope": "/",
   "start_url": "/",
   "icons": [

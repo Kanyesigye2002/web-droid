@@ -3,6 +3,7 @@ import { alpha, useTheme } from '@mui/material/styles';
 import { Box, Button, Card, Divider, Stack, Typography } from '@mui/material';
 import { Icon } from '@iconify/react';
 import checkmarkFill from '@iconify/icons-eva/checkmark-fill';
+import { Link as RouterLink } from 'react-router-dom';
 
 
 PlanCard.propTypes = {
@@ -99,8 +100,8 @@ export default function PlanCard({ plan, cardIndex }) {
           size="large"
           fullWidth
           variant={cardIndex === 1 ? 'contained' : 'outlined'}
-          target="_blank"
-          href="https://material-ui.com/store/items/minimal-dashboard/"
+          component={RouterLink}
+          to={'/contact-us'}
         >
           Contact Us
         </Button>

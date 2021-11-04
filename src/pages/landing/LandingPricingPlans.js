@@ -7,6 +7,7 @@ import { useTheme, styled, alpha } from '@mui/material/styles';
 import { Box, Grid, Card, Link, Stack, Button, Divider, Container, Typography } from '@mui/material';
 //
 import { varFadeIn, varFadeInUp, MotionInView, varFadeInDown } from '../../components/animate';
+import { Link as RouterLink } from 'react-router-dom';
 
 // ----------------------------------------------------------------------
 
@@ -122,8 +123,8 @@ function PlanCard({ plan, cardIndex }) {
           size="large"
           fullWidth
           variant={cardIndex === 1 ? 'contained' : 'outlined'}
-          target="_blank"
-          href="https://material-ui.com/store/items/minimal-dashboard/"
+          component={RouterLink}
+          to={'/contact-us'}
         >
           Contact Us
         </Button>
