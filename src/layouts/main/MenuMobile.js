@@ -10,7 +10,7 @@ import { alpha, styled, useTheme } from '@mui/material/styles';
 import { Box, List, Link, Drawer, Collapse, ListItemText, ListItemIcon, ListItemButton, useMediaQuery } from '@mui/material';
 // components
 import Logo from '../../components/LogoFull';
-import LogoMobile from '../../components/LogoMobileFull';
+import LogoMobile from '../../components/LogoMobiles';
 import NavSection from '../../components/NavSection';
 import Scrollbar from '../../components/Scrollbar';
 import { MIconButton } from '../../components/@material-extend';

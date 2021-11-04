@@ -6,7 +6,7 @@ import { Box, Button, AppBar, Toolbar, Container, useMediaQuery } from '@mui/mat
 import useOffSetTop from '../../hooks/useOffSetTop';
 // components
 import Logo from '../../components/LogoFull';
-import LogoMobile from '../../components/LogoMobileFull';
+import LogoMobile from '../../components/LogoMobiles';
 import logo1 from '../../assets/languageIcons/logo-white.svg';
 import { MHidden } from '../../components/@material-extend';
 //
