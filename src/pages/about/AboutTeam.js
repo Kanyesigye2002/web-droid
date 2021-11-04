@@ -109,8 +109,11 @@ export default function AboutTeam() {
   const settings = {
     slidesToShow: 4,
     centerMode: true,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    speed: 200,
     centerPadding: '0 80px',
-    rtl: Boolean(theme.direction === 'rtl'),
     responsive: [
       {
         breakpoint: 1279,

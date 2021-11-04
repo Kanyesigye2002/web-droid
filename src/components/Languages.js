@@ -23,11 +23,11 @@ function Languages() {
     slidesToShow: 6,
     centerMode: true,
     arrows: false,
-    centerPadding: '0',
-    slidesToScroll: 1,
     infinite: true,
     autoplay: true,
     speed: 200,
+    centerPadding: '0',
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1279,

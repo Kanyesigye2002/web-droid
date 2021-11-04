@@ -70,8 +70,10 @@ export default function AboutTeam() {
     slidesToShow: 2,
     centerMode: true,
     arrows: false,
+    infinite: true,
+    autoplay: true,
+    speed: 200,
     centerPadding: '0 0px',
-    rtl: Boolean(theme.direction === 'rtl'),
     responsive: [
       {
         breakpoint: 600,
