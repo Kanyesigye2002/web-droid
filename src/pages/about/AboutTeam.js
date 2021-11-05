@@ -18,7 +18,7 @@ import { CarouselControlsArrowsBasic2 } from '../../components/carousel';
 import Allan1 from '../../assets/images/members/Allan1.jpg'
 import Anitah from '../../assets/images/members/Anitah.jpg'
 import Enock from '../../assets/images/members/Enock.jpg'
-import Jordan from '../../assets/images/members/jordan2.jpg'
+import Jordan from '../../assets/images/members/jordan2.jpeg'
 import Teddy1 from '../../assets/images/members/Teddy1.jpg'
 import mock_avatar from '../../assets/images/members/mock_avatar.jpg'
 
