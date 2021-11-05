@@ -13,6 +13,7 @@ export default function Logo({ sx }) {
   const theme = useTheme();
   const PRIMARY_LIGHT = theme.palette.primary.light;
   const PRIMARY_MAIN = theme.palette.primary.main;
+  const PRIMARY_DARK = theme.palette.primary.dark;
 
   return (
     <Box sx={{ width: 130, height: 40, ...sx }}>
