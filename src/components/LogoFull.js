@@ -13,7 +13,6 @@ export default function Logo({ sx }) {
   const theme = useTheme();
   const PRIMARY_LIGHT = theme.palette.primary.light;
   const PRIMARY_MAIN = theme.palette.primary.main;
-  const PRIMARY_DARK = theme.palette.primary.dark;
 
   return (
     <Box sx={{ width: 130, height: 40, ...sx }}>
@@ -46,7 +45,7 @@ export default function Logo({ sx }) {
           </g>
           <text id='eb_Droid' transform='translate(643 708)' fill={PRIMARY_DARK} fontSize='60'
                 fontFamily='SegoeUI-Bold, Segoe UI' fontWeight='700'>
-            <tspan x='0' y='0'>ebersDroid</tspan>
+            <tspan x='0' y='0'>ebDroid</tspan>
           </text>
         </g>
       </svg>

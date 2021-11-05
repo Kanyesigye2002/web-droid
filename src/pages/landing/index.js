@@ -1,6 +1,6 @@
 import LandingHero from './LandingHero';
 import LandingMinimal from './LandingMinimal';
-import LandingPricingPlans from '../pricing';
+import LandingPricingPlans from './LandingPricings';
 import LandingAdvertisement from './LandingAdvertisement';
 
 // material

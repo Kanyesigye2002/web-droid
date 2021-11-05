@@ -14,9 +14,9 @@ const PLANS = [
   {
     subscription: 'STATIC WEBSITE',
     icon: <PlanFreeIcon />,
-    price: 100,
+    price: 200,
     priceTwo: 300,
-    priceMo: 20,
+    priceMo: 10,
     caption: 'Basic Website',
     commons: ['One end products', '1 months updates', '3 months of support'],
     options: ['React Js App', 'Material Styles', 'Content Management System', 'Mode Theming', 'Interactive Dashboard'],
@@ -28,7 +28,7 @@ const PLANS = [
     price: 300,
     priceTwo: 1000,
     caption: 'Dynamic sites',
-    priceMo: 20,
+    priceMo: 10,
     commons: ['One end products', '1 months updates', '3 months of support'],
     options: ['React Js App', 'Material Styles', 'Content Management System', 'Mode Theming', 'Interactive Dashboard'],
     labelAction: 'choose zonal'
