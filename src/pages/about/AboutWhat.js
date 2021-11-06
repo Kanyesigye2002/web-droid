@@ -120,7 +120,7 @@ export default function AboutWhat() {
           <Grid item xs={12} md={6} lg={5}>
             <MotionInView variants={varFadeInRight}>
               <Typography variant='h2' sx={{ mb: 3 }}>
-                What is Wed Droid?
+                What is Web Droid?
               </Typography>
             </MotionInView>
 
@@ -130,8 +130,8 @@ export default function AboutWhat() {
                   color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
                 }}
               >
-                Wed Droid is a bridge between business needs and the world of IT solutions. We see ourselves as
-                trusted solutions partner.We understand your needs, Identify-Integrate-Support High quality, affordable
+                Web Droid is a bridge between business needs and the world of IT solutions. We see ourselves as
+                trusted solutions partner. We understand your needs, Identify-Integrate-Support High quality, affordable
                 IT Solutions in Software, Systems and Web Development Services.
               </Typography>
             </MotionInView>

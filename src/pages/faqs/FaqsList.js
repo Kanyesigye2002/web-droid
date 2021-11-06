@@ -16,6 +16,29 @@ const MOCK_FAQS = [...Array(8)].map((_, index) => ({
   detail: mockData.text.description(index)
 }));
 
+
+const FAQS = [
+  {
+    id: 1,
+    value: 'panel1',
+    heading: '',
+    detail: ''
+  },
+  {
+    id: 1,
+    value: 'panel1',
+    heading: '',
+    detail: ''
+  },
+  {
+    id: 1,
+    value: 'panel1',
+    heading: '',
+    detail: ''
+  },
+]
+
+
 // ----------------------------------------------------------------------
 
 export default function FaqsList() {

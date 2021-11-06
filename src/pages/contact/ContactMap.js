@@ -48,6 +48,8 @@ export default function ContactMap() {
     zoom: 2
   });
 
+  console.log("map Config: ", mapConfig)
+
   return (
     <MotionInView variants={varFadeIn}>
       <RootStyle>
