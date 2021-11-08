@@ -17,7 +17,7 @@ const CARDS = [
     icon: '/static/icons/ic_code.svg',
     title: 'Website Design',
     description:
-      'Wed Droid is Uganda’s leading web design and the company focuses on delivering quality web applications. We offer modern and mobile-friendly website design that targets both the user and the search engines'
+      'Web Droid is Uganda’s leading web design and the company focuses on delivering quality web applications. We offer modern and mobile-friendly website design that targets both the user and the search engines'
   },
   {
     icon: '/static/brand/logo_single.svg',
@@ -102,12 +102,12 @@ export default function LandingMinimalHelps() {
         <Box sx={{ mb: { xs: 10, md: 25 } }}>
           <MotionInView variants={varFadeInUp}>
             <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.secondary', textAlign: 'center' }}>
-              Wed Droid
+              Web Droid
             </Typography>
           </MotionInView>
           <MotionInView variants={varFadeInDown}>
             <Typography variant="h2" sx={{ textAlign: 'center' }}>
-              What Wed Droid helps you?
+              What Web Droid helps you?
             </Typography>
           </MotionInView>
         </Box>

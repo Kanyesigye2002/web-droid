@@ -31,15 +31,15 @@ const SKILLS = [
   },
   {
     label: 'React JS',
-    value: 92.4
+    value: 95.4
   },
   {
     label: 'Java & Spring Boot',
     value: 85.7
   },
   {
-    label: 'Word Press',
-    value: 56.7
+    label: 'Kotlin',
+    value: 89.7
   }
 ];
 

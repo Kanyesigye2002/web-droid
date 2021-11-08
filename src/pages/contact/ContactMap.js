@@ -14,14 +14,9 @@ import { varFadeIn, MotionInView } from '../../components/animate';
 
 export const MOCK_ADDRESS = [
   {
-    latlng: [33, 65],
-    address: '720 Devonshire Ave. Fort Mill, SC 29708',
-    phoneNumber: '905-659-7545'
-  },
-  {
-    latlng: [-12.5, 18.5],
-    address: '8559 Valley Court Owosso, MI 48867',
-    phoneNumber: '1-350-356-2625'
+    latlng: [0.31674, 32.57781],
+    address: 'YWCA George St, Kampala',
+    phoneNumber: '0752331807'
   }
 ];
 
@@ -43,12 +38,10 @@ export default function ContactMap() {
   const isLight = theme.palette.mode === 'light';
   const [tooltip, setTooltip] = useState(null);
   const [viewport, setViewport] = useState({
-    latitude: 12,
-    longitude: 42,
-    zoom: 2
+    latitude: 0.31674,
+    longitude: 32.57781,
+    zoom: 10
   });
-
-  console.log("map Config: ", mapConfig)
 
   return (
     <MotionInView variants={varFadeIn}>
