@@ -43,7 +43,7 @@ import {
   TimelineOppositeContent,
   LoadingButton
 } from '@mui/lab';
-import Page from './components/Page';
+import Page from '../../../components/Page';
 import { MHidden, MIconButton } from '../../../components/@material-extend';
 import useIsMountedRef from '../../../hooks/useIsMountedRef';
 
