@@ -52,6 +52,7 @@ export default function Router() {
       element: <MainLayout />,
       children: [
         { element: <LandingPage /> },
+        { path: 'projects/ongoing/vumah', element: <VumahWorkFlow /> },
         { path: 'about-us', element: <About /> },
         { path: 'contact-us', element: <Contact /> },
         { path: 'faqs', element: <Faqs /> },
@@ -67,6 +68,7 @@ export default function Router() {
 
 // IMPORT COMPONENTS
 const LandingPage = Loadable(lazy(() => import('../pages/landing')));
+const VumahWorkFlow = Loadable(lazy(() => import('../pages/Projects/workFlows/VumahWorkFlow')));
 const About = Loadable(lazy(() => import('../pages/about')));
 const Contact = Loadable(lazy(() => import('../pages/contact')));
 const Faqs = Loadable(lazy(() => import('../pages/faqs')));
