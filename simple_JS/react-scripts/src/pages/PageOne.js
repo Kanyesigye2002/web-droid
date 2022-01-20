@@ -3,7 +3,8 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import { useEffect, useState } from 'react';
 // components
 import Page from '../components/Page';
-// ----------------------------------------------------------------------
+// ----------------------------------------------------------------------// routes
+import { PATH_DASHBOARD } from '../routes/paths';
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
