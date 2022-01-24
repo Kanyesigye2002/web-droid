@@ -38,16 +38,28 @@ import { UserListHead, UserListToolbar, UserMoreMenu } from '../sections/@dashbo
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
+  { id: 'STT', label: 'STT', alignRight: false },
   { id: 'ten_san_pham', label: 'Tên sản phẩm', alignRight: false },
   { id: 'ma_san_pham', label: 'Mã sản phẩm', alignRight: false },
-  { id: 'total_quantity', label: 'Tổng nhập', alignRight: false },
+  { id: 'total_quantity', label: 'Tổng nhập từ trước đến nay', alignRight: false },
   { id: 'quantity_current', label: 'Số lượng hiện tại', alignRight: false },
   { id: 'unit_name', label: 'Đơn vị tính', alignRight: false },
+  { id: 'created_date', label: 'Ngày tạo', alignRight: false },
+  { id: 'lstChiTiet', label: 'Chi tiết', alignRight: false },
   { id: '' },
 ];
 
+const TABLE_HEAD_DETAIL = [
+  { id: 'ten_size', label: 'Size', alignRight: false },
+  { id: 'ten_mau_sac', label: 'Tên màu sắc', alignRight: false },
+  { id: 'quantity', label: 'Tổng nhập', alignRight: false },
+  { id: 'quantity_current', label: 'Số lượng hiện tại', alignRight: false },
+  { id: 'price', label: 'Giá nhập', alignRight: false },
+  { id: 'quantity_limit', label: 'Giới hạn cảnh báo', alignRight: false },
+];
 // ----------------------------------------------------------------------
 // console.log(process.env.REACT_APP_API_HOST);
+const link = process.env.REACT_APP_API_HOST;
 
 export default function UserList() {
   const theme = useTheme();
@@ -61,7 +73,7 @@ export default function UserList() {
   };
 
   useEffect(() => {
-    fetch(`http://171.244.141.179:7000/product/getall`, requestOptions)
+    fetch(`${link}/product/getall`, requestOptions)
       .then((response) => response.json())
       .then((data) => setUserList(data.data))
       .catch((err) => console.log(err));
@@ -152,25 +164,66 @@ export default function UserList() {
           <Scrollbar>
             <TableContainer sx={{ minWidth: 800 }}>
               <Table>
-                <UserListHead
-                  order={order}
-                  orderBy={orderBy}
-                  headLabel={TABLE_HEAD}
-                  rowCount={userList.length}
-                  numSelected={selected.length}
-                  onRequestSort={handleRequestSort}
-                />
+                <UserListHead headLabel={TABLE_HEAD} rowCount={userList.length} numSelected={selected.length} />
                 <TableBody>
-                  {filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
-                    const { id, ten_san_pham, ma_san_pham, total_quantity, quantity_current, unit_name } = row;
+                  {filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => {
+                    const {
+                      id,
+                      ten_san_pham,
+                      ma_san_pham,
+                      total_quantity,
+                      quantity_current,
+                      unit_name,
+                      created_date_str,
+                      lstChiTiet,
+                    } = row;
 
                     return (
-                      <TableRow hover key={id} tabIndex={-1}>
-                        <TableCell align="center">{ten_san_pham}</TableCell>
+                      <TableRow hover key={id} tabIndex={-1} sx={{ borderBottom: 0.1 }}>
+                        <TableCell align="center">{index + 1}</TableCell>
                         <TableCell align="center">{ma_san_pham}</TableCell>
+                        <TableCell align="center">{ten_san_pham}</TableCell>
                         <TableCell align="center">{total_quantity}</TableCell>
-                        <TableCell align="center">{quantity_current}</TableCell>
+                        <TableCell align="center" color="500">
+                          {quantity_current}
+                        </TableCell>
                         <TableCell align="center">{unit_name}</TableCell>
+                        <TableCell align="center">{created_date_str}</TableCell>
+                        <TableCell align="center">
+                          <Table>
+                            <UserListHead headLabel={TABLE_HEAD_DETAIL} rowCount={lstChiTiet.length} />
+                            {lstChiTiet.map((r) => {
+                              const {
+                                id,
+                                ten_size,
+                                ten_mau_sac,
+                                quantity,
+                                quantity_current,
+                                money_str,
+                                quantity_limit,
+                              } = r;
+
+                              return (
+                                // eslint-disable-next-line react/jsx-key
+                                <TableBody>
+                                  <TableRow hover key={r.id} id={r.id} tabIndex={-1}>
+                                    <TableCell align="center">{ten_size}</TableCell>
+                                    <TableCell align="center">{ten_mau_sac}</TableCell>
+                                    <TableCell align="center">{quantity}</TableCell>
+                                    <TableCell align="center">{quantity_current}</TableCell>
+                                    <TableCell align="center">{money_str}</TableCell>
+                                    <TableCell
+                                      align="center"
+                                      title="Gửi email thông báo khi số lượng trong kho chạm giới hạn!"
+                                    >
+                                      {quantity_limit == null ? '0' : quantity_limit} sp
+                                    </TableCell>
+                                  </TableRow>
+                                </TableBody>
+                              );
+                            })}
+                          </Table>
+                        </TableCell>
 
                         <TableCell align="center">
                           <UserMoreMenu onDelete={() => handleDeleteUser(id)} userName={ten_san_pham} />
