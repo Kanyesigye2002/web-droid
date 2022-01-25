@@ -9,10 +9,10 @@ import InputStyle from '../../../../components/InputStyle';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Toolbar)(({ theme }) => ({
-  height: 80,
+  height: 60,
   display: 'flex',
   justifyContent: 'space-between',
-  padding: theme.spacing(0, 1, 0, 3),
+  padding: theme.spacing(5, 0, 5, 0),
 }));
 
 // ----------------------------------------------------------------------

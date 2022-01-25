@@ -41,8 +41,8 @@ const TABLE_HEAD = [
   { id: 'STT', label: 'STT', alignRight: false },
   { id: 'ten_san_pham', label: 'Tên sản phẩm', alignRight: false },
   { id: 'ma_san_pham', label: 'Mã sản phẩm', alignRight: false },
-  { id: 'total_quantity', label: 'Tổng nhập từ trước đến nay', alignRight: false },
-  { id: 'quantity_current', label: 'Số lượng hiện tại', alignRight: false },
+  { id: 'total_quantity', label: 'Tổng nhập từ trước đến nay', alignRight: false, color: '#00a08a' },
+  { id: 'quantity_current', label: 'Số lượng hiện tại', alignRight: false, color: '#28a745' },
   { id: 'unit_name', label: 'Đơn vị tính', alignRight: false },
   { id: 'created_date', label: 'Ngày tạo', alignRight: false },
   { id: 'lstChiTiet', label: 'Chi tiết', alignRight: false },
@@ -52,9 +52,9 @@ const TABLE_HEAD = [
 const TABLE_HEAD_DETAIL = [
   { id: 'ten_size', label: 'Size', alignRight: false },
   { id: 'ten_mau_sac', label: 'Tên màu sắc', alignRight: false },
-  { id: 'quantity', label: 'Tổng nhập', alignRight: false },
-  { id: 'quantity_current', label: 'Số lượng hiện tại', alignRight: false },
-  { id: 'price', label: 'Giá nhập', alignRight: false },
+  { id: 'quantity', label: 'Tổng nhập', alignRight: false, color: '#00a08a' },
+  { id: 'quantity_current', label: 'Số lượng hiện tại', alignRight: false, color: '#28a745' },
+  { id: 'price', label: 'Giá nhập (vnđ)', alignRight: false },
   { id: 'quantity_limit', label: 'Giới hạn cảnh báo', alignRight: false },
 ];
 // ----------------------------------------------------------------------
@@ -92,21 +92,6 @@ export default function UserList() {
     setOrder(isAsc ? 'desc' : 'asc');
     setOrderBy(property);
   };
-
-  // const handleClick = (name) => {
-  //   const selectedIndex = selected.indexOf(name);
-  //   let newSelected = [];
-  //   if (selectedIndex === -1) {
-  //     newSelected = newSelected.concat(selected, name);
-  //   } else if (selectedIndex === 0) {
-  //     newSelected = newSelected.concat(selected.slice(1));
-  //   } else if (selectedIndex === selected.length - 1) {
-  //     newSelected = newSelected.concat(selected.slice(0, -1));
-  //   } else if (selectedIndex > 0) {
-  //     newSelected = newSelected.concat(selected.slice(0, selectedIndex), selected.slice(selectedIndex + 1));
-  //   }
-  //   setSelected(newSelected);
-  // };
 
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
@@ -149,9 +134,10 @@ export default function UserList() {
               to={PATH_DASHBOARD.user.newUser}
               startIcon={<Iconify icon={'eva:plus-fill'} />}
             >
-              New User
+              Thêm mới
             </Button>
           }
+          sx={{ height: 24 }}
         />
 
         <Card>
@@ -183,8 +169,10 @@ export default function UserList() {
                         <TableCell align="center">{index + 1}</TableCell>
                         <TableCell align="center">{ma_san_pham}</TableCell>
                         <TableCell align="center">{ten_san_pham}</TableCell>
-                        <TableCell align="center">{total_quantity}</TableCell>
-                        <TableCell align="center" color="500">
+                        <TableCell align="center" style={{ color: 'rgb(0 206 178)' }}>
+                          {total_quantity}
+                        </TableCell>
+                        <TableCell align="center" style={{ color: 'rgb(0 224 51)' }}>
                           {quantity_current}
                         </TableCell>
                         <TableCell align="center">{unit_name}</TableCell>
@@ -209,14 +197,20 @@ export default function UserList() {
                                   <TableRow hover key={r.id} id={r.id} tabIndex={-1}>
                                     <TableCell align="center">{ten_size}</TableCell>
                                     <TableCell align="center">{ten_mau_sac}</TableCell>
-                                    <TableCell align="center">{quantity}</TableCell>
-                                    <TableCell align="center">{quantity_current}</TableCell>
-                                    <TableCell align="center">{money_str}</TableCell>
+                                    <TableCell align="center" style={{ color: 'rgb(0 206 178)' }}>
+                                      {quantity}
+                                    </TableCell>
+                                    <TableCell align="center" style={{ color: 'rgb(0 224 51)' }}>
+                                      {quantity_current}
+                                    </TableCell>
+                                    <TableCell align="center" style={{ color: '#ff0b0b' }}>
+                                      {money_str === '0' ? '' : money_str}
+                                    </TableCell>
                                     <TableCell
                                       align="center"
                                       title="Gửi email thông báo khi số lượng trong kho chạm giới hạn!"
                                     >
-                                      {quantity_limit == null ? '0' : quantity_limit} sp
+                                      {quantity_limit == null ? '' : `${quantity_limit} sp`}
                                     </TableCell>
                                   </TableRow>
                                 </TableBody>
@@ -299,18 +293,6 @@ function applySortFilter(array, comparator, query) {
   }
   return stabilizedThis.map((el) => el[0]);
 }
-
-// function createData(name, calories, fat, carbs, protein) {
-//   return { name, calories, fat, carbs, protein };
-// }
-
-// const rows = [
-//   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-//   createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-//   createData('Eclair', 262, 16.0, 24, 6.0),
-//   createData('Cupcake', 305, 3.7, 67, 4.3),
-//   createData('Gingerbread', 356, 16.0, 49, 3.9),
-// ];
 
 // export default function PageOne() {
 //   const [dataTable, setDatatable] = useState([]);

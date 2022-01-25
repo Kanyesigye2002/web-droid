@@ -68,6 +68,7 @@ export default function DashboardHeader({ onOpenSidebar, isCollapse = false, ver
         sx={{
           minHeight: '100% !important',
           px: { lg: 5 },
+          alignContent: 'right',
         }}
       >
         {isDesktop && verticalLayout && <Logo sx={{ mr: 2.5 }} />}
@@ -77,16 +78,16 @@ export default function DashboardHeader({ onOpenSidebar, isCollapse = false, ver
             <Iconify icon="eva:menu-2-fill" />
           </IconButtonAnimate>
         )}
-
+        {/* 
         <Searchbar />
-        <Box sx={{ flexGrow: 1 }} />
+        <Box sx={{ flexGrow: 1 }} /> */}
 
-        <Stack direction="row" alignItems="center" spacing={{ xs: 0.5, sm: 1.5 }}>
+        {/* <Stack direction="row" alignItems="center" spacing={{ xs: 0.5, sm: 1.5 }}>
           <LanguagePopover />
           <NotificationsPopover />
           <ContactsPopover />
           <AccountPopover />
-        </Stack>
+        </Stack> */}
       </Toolbar>
     </RootStyle>
   );
