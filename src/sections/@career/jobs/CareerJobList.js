@@ -25,11 +25,16 @@ export default function CareerJobList({ jobs, loading }) {
             xs: 'repeat(1, 1fr)',
             sm: 'repeat(2, 1fr)',
             md: 'repeat(3, 1fr)',
+            lg: 'repeat(4, 1fr)',
           },
         }}
       >
         {(loading ? [...Array(6)] : jobs).map((job, index) =>
-          job ? <CareerJobItem key={job.id} job={job} /> : <JobItemSkeleton key={index} />
+          job ? (
+            <CareerJobItem key={job.id} job={job} />
+          ) : (
+            <JobItemSkeleton key={index} />
+          )
         )}
       </Box>
 

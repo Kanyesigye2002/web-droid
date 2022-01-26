@@ -19,17 +19,22 @@ export default function TravelTourList({ tours, loading }) {
       <Box
         sx={{
           display: 'grid',
-          rowGap: { xs: 4, md: 5 },
-          columnGap: 3,
+          rowGap: { xs: 4, md: 5, lg: 7 },
+          columnGap: { xs: 3, md: 3, lg: 3 },
           gridTemplateColumns: {
             xs: 'repeat(1, 1fr)',
             sm: 'repeat(2, 1fr)',
             md: 'repeat(4, 1fr)',
+            lg: 'repeat(5, 1fr)',
           },
         }}
       >
         {(loading ? [...Array(8)] : tours).map((tour, index) =>
-          tour ? <TravelTourItem key={tour.id} tour={tour} /> : <TourItemSkeleton key={index} />
+          tour ? (
+            <TravelTourItem key={tour.id} tour={tour} />
+          ) : (
+            <TourItemSkeleton key={index} />
+          )
         )}
       </Box>
 
