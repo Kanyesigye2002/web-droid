@@ -1,5 +1,5 @@
 // routes
-import Router from './routes';
+import Router from './pages/Projects/workFlows/VumahWorkFlow';
 // theme
 import ThemeConfig from './theme';
 import GlobalStyles from './theme/globalStyles';
@@ -28,7 +28,7 @@ export default function App() {
               <GlobalStyles />
               <ProgressBarStyle />
               <BaseOptionChartStyle />
-              <Settings />
+              {/* <Settings /> */}
               <ScrollToTop />
               <GoogleAnalytics />
               <Router />

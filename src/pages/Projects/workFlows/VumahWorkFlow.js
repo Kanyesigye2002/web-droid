@@ -49,56 +49,12 @@ import useIsMountedRef from '../../../hooks/useIsMountedRef';
 
 const TIMELINES = [
   {
-    key: 1,
-    typeAssignment: false,
-    title: 'Contract Initialisation',
-    desc: ['Signing of the contract documents'],
-    time: '21/11/2021',
-    icon: <DocumentScanner />
-  },
-  {
-    key: 2,
-    typeAssignment: false,
-    title: 'Meeting One',
-    desc: ['Google meeting Held between Allan and Raphael Sterk'],
-    time: '19/11/2021 (10:50 am)',
-    color: 'secondary',
-    icon: <Call />
-  },
-  {
-    key: 3,
-    typeAssignment: false,
-    title: 'Contract Activation',
-    desc: ['An upwork contract assigned by Raphael to Allan via Upwork'],
-    time: '20/11/2021 (11:30 am)',
-    color: 'secondary',
-    icon: <LaptopMac />
-  },
-  {
-    key: 4,
-    typeAssignment: false,
-    title: 'Meeting Two',
-    desc: ['Google meeting Held between Allan and Raphael Sterk'],
-    time: '20/11/2021 (11:30 am)',
-    color: 'secondary',
-    icon: <Call />
-  },
-  {
-    key: 5,
-    typeAssignment: false,
-    title: 'Meeting There',
-    desc: ['Google meeting with the Vumah Ltd Development Team'],
-    time: '22/11/2021 (7:30 am)',
-    color: 'secondary',
-    icon: <Call />
-  },
-  {
     key: 6,
     typeAssignment: true,
     title: 'Search autocomplete',
     desc: ['All search bars Linked to google auto complete api based on the UK -> Autocomplete API integrated with search box  to provide city suggestions per key stroke'],
     time: '23/11/2021 (10:30 am)',
-    color: 'success',
+    color: 'warning',
     icon: <Assignment />
   },
   {
@@ -211,8 +167,8 @@ const TIMELINES = [
 ];
 
 const RootStyle = styled(Page)(({ theme }) => ({
-  paddingTop: theme.spacing(15),
-  paddingBottom: theme.spacing(15),
+  paddingTop: theme.spacing(5),
+  paddingBottom: theme.spacing(5),
   [theme.breakpoints.up('md')]: {
     display: 'flex'
   }
@@ -461,7 +417,7 @@ function VumahWorkFlow() {
                     </Typography>
                   </Grid>
                 </Grid>
-                <MHidden width='mdDown'>
+                <MHidden width='smDown'>
                   <Card sx={{ overflow: 'unset', position: 'unset', width: '100%' }}>
                     <Box sx={{ p: 3, minHeight: 180 }}>
                       <Timeline position='alternate'>
@@ -499,7 +455,7 @@ function VumahWorkFlow() {
                     </Box>
                   </Card>
                 </MHidden>
-                <MHidden width='mdUp'>
+                <MHidden width='smUp'>
                   <Card sx={{ overflow: 'unset', position: 'unset', width: '100%' }}>
                     <CardHeader title='Customized' />
                     <Box sx={{ p: 3, minHeight: 180 }}>
