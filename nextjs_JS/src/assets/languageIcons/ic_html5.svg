@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.078"/>
+      <stop offset="1" stop-opacity="0.078"/>
+    </linearGradient>
+  </defs>
+  <g id="ic_html5" transform="translate(-249 -225)">
+    <g id="icons8_css3" transform="translate(253.454 231.507)">
+      <path id="Path_14" data-name="Path 14" d="M23.546,5H7L8.46,21.546l6.813,1.947,6.813-1.947L23.546,5Z" fill="#0277bd"/>
+      <path id="Path_15" data-name="Path 15" d="M24,8V23.524l5.451-1.557L30.667,8Z" transform="translate(-8.727 -1.54)" fill="#039be5"/>
+      <path id="Path_16" data-name="Path 16" d="M28.429,13H24v1.947h2.385l-.146,1.947H24V18.84h2.141L26,21.03l-2,.681v2.044l3.845-1.265.341-5.6h0Z" transform="translate(-8.727 -4.107)" fill="#fff"/>
+      <path id="Path_17" data-name="Path 17" d="M19.277,13v1.947H14.946L14.8,13Zm-2.239,3.893.1,1.947h2.141V16.893Zm.195,2.92H15.287l.146,2.677,3.845,1.265V21.711l-2-.681Z" transform="translate(-4.004 -4.107)" fill="#eee"/>
+    </g>
+    <g id="Group_3" data-name="Group 3" transform="translate(9 40)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="40" height="40" rx="12" transform="translate(240 185)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="40" height="40" rx="12" transform="translate(240 185)" fill="rgba(97,218,251,0.2)"/>
+    </g>
+  </g>
+</svg>

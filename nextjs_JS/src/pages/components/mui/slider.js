@@ -203,7 +203,7 @@ export default function MUISlider() {
                 <Typography variant="subtitle2" gutterBottom>
                   Min: {valuePrice(price[0])}
                 </Typography>
-                <Typography variant="subtitle2">Max: {valuePrice(price[1])}</Typography>
+                <Typography variant="subtitle2">npm Max: {valuePrice(price[1])}</Typography>
               </Box>
             </Block>
           </Masonry>

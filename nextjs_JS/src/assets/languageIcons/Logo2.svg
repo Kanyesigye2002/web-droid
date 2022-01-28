@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.897" y1="0.134" x2="0.203" y2="0.906" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.078"/>
+      <stop offset="1" stop-color="#fdc056" stop-opacity="0.239"/>
+    </linearGradient>
+  </defs>
+  <g id="Logo2" transform="translate(-249 -271)">
+    <g id="Rect" transform="translate(60 46)">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="40" height="40" rx="12" transform="translate(189 225)"/>
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="40" height="40" rx="12" transform="translate(189 225)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="logo1" transform="translate(-262.143 64.483) rotate(0.974)">
+      <path id="Path_52" data-name="Path 52" d="M529.06,230.025a1.182,1.182,0,0,0,1.7.183c.049-.074,3.654-4.66,3.654-4.66a1.259,1.259,0,0,0-.221-1.422c0-.024-13.665-15.023-13.665-15.023a1.177,1.177,0,0,0-1.585,1.264Z" transform="translate(0 -1)" fill="#fff"/>
+      <path id="Path_53" data-name="Path 53" d="M718.638,280.844s.861.8,1.626-.383c.032,0,2.487-6.122,2.487-6.122l-18.175-11.191s-1.754-.255-1.307,1.626Z" transform="translate(-176.21 -52.722)" fill="#fff"/>
+      <path id="Path_54" data-name="Path 54" d="M1056.812,225.1a.581.581,0,0,0,0,.7c.019-.019,4.622,3.168,4.622,3.168a1,1,0,0,0,1.208-.547c.019-.038,3.15-8.074,3.15-8.074s.17-1.6-1.547-1.226Z" transform="translate(-514.56 -10.628)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
