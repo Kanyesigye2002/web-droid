@@ -13,11 +13,10 @@ import SocialsButton from '../../components/SocialsButton';
 
 const LINKS = [
   {
-    headline: 'Minimal',
+    headline: 'Tier3-engineers',
     children: [
-      { name: 'About us', href: PATH_PAGE.about },
+      { name: 'Home', href: PATH_PAGE.about },
       { name: 'Contact us', href: PATH_PAGE.contact },
-      { name: 'FAQs', href: PATH_PAGE.faqs },
     ],
   },
   {
@@ -30,7 +29,7 @@ const LINKS = [
   {
     headline: 'Contact',
     children: [
-      { name: 'support@minimals.cc', href: '#' },
+      { name: 'support@tier3engineers.com', href: '#' },
       { name: 'Los Angeles, 359  Hidden Valley Road', href: '#' },
     ],
   },

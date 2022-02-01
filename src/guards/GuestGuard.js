@@ -4,8 +4,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 // hooks
 import useAuth from '../hooks/useAuth';
-// routes
-import { PATH_DASHBOARD } from '../routes/paths';
 
 // ----------------------------------------------------------------------
 
@@ -20,7 +18,7 @@ export default function GuestGuard({ children }) {
 
   useEffect(() => {
     if (isAuthenticated) {
-      push(PATH_DASHBOARD.root);
+      push('/user/account');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);

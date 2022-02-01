@@ -46,7 +46,7 @@ export default function ComingSoon() {
   const countdown = useCountdown(new Date('07/07/2022 21:30'));
 
   return (
-    <Page title="Coming Soon" sx={{ height: 1 }}>
+    <Page title="Coming Soon | Tier3-Engineers" sx={{ height: 1 }}>
       <RootStyle>
         <Container>
           <Box sx={{ maxWidth: 480, margin: 'auto', textAlign: 'center' }}>

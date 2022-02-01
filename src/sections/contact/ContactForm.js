@@ -1,44 +1,139 @@
-import { m } from 'framer-motion';
+import * as Yup from 'yup';
+import { useForm, Controller } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 // @mui
-import { Button, Typography, TextField, Stack } from '@mui/material';
-// components
-import { MotionViewport, varFade } from '../../components/animate';
+import { LoadingButton } from '@mui/lab';
+import {
+  Stack,
+  TextField,
+  Typography,
+  ToggleButton,
+  FormHelperText,
+  Slider as MUISlider,
+} from '@mui/material';
+
+// ----------------------------------------------------------------------
+
+const FormSchema = Yup.object().shape({
+  email: Yup.string().required('Email is required').email('That is not an email'),
+  firstName: Yup.string().required('First Name is required'),
+  lastName: Yup.string().required('Last Name is required'),
+  message: Yup.string().required('Message is required'),
+});
 
 // ----------------------------------------------------------------------
 
 export default function ContactForm() {
+  const {
+    reset,
+    control,
+    handleSubmit,
+    formState: { isSubmitting },
+  } = useForm({
+    mode: 'onTouched',
+    resolver: yupResolver(FormSchema),
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phoneNumber: '',
+      message: '',
+    },
+  });
+
+  const onSubmit = async (data) => {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    alert(JSON.stringify(data, null, 2));
+    reset();
+  };
+
   return (
-    <Stack component={MotionViewport} spacing={5}>
-      <m.div variants={varFade().inUp}>
-        <Typography variant="h3">
-          Feel free to contact us. <br />
-          We'll be glad to hear from you, buddy.
-        </Typography>
-      </m.div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Stack spacing={2.5} alignItems="flex-start">
 
-      <Stack spacing={3}>
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Name" />
-        </m.div>
+        <Stack
+          direction={{ xs: 'column', md: 'row' }}
+          spacing={{ xs: 2.5, md: 2 }}
+          sx={{ width: 1 }}
+        >
+          <Controller
+            name="firstName"
+            control={control}
+            render={({ field, fieldState: { error } }) => (
+              <TextField
+                {...field}
+                fullWidth
+                label="First Name"
+                error={Boolean(error)}
+                helperText={error?.message}
+              />
+            )}
+          />
 
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Email" />
-        </m.div>
+          <Controller
+            name="lastName"
+            control={control}
+            render={({ field, fieldState: { error } }) => (
+              <TextField
+                {...field}
+                fullWidth
+                label="Last Name"
+                error={Boolean(error)}
+                helperText={error?.message}
+              />
+            )}
+          />
+        </Stack>
 
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Subject" />
-        </m.div>
+        <Controller
+          name="email"
+          control={control}
+          render={({ field, fieldState: { error } }) => (
+            <TextField
+              {...field}
+              fullWidth
+              label="Email"
+              error={Boolean(error)}
+              helperText={error?.message}
+            />
+          )}
+        />
 
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Enter your message here." multiline rows={4} />
-        </m.div>
+        <Controller
+          name="phoneNumber"
+          control={control}
+          render={({ field, fieldState: { error } }) => (
+            <TextField
+              {...field}
+              fullWidth
+              label="Phone number"
+              error={Boolean(error)}
+              helperText={error?.message}
+            />
+          )}
+        />
+
+        <Controller
+          name="message"
+          control={control}
+          render={({ field, fieldState: { error } }) => (
+            <TextField
+              {...field}
+              fullWidth
+              multiline
+              rows={4}
+              label="Message"
+              error={Boolean(error)}
+              helperText={error?.message}
+              sx={{ pb: 2.5 }}
+            />
+          )}
+        />
+
+        <LoadingButton size="large" type="submit" variant="contained" loading={isSubmitting}>
+          Send Message
+        </LoadingButton>
       </Stack>
-
-      <m.div variants={varFade().inUp}>
-        <Button size="large" variant="contained">
-          Submit Now
-        </Button>
-      </m.div>
-    </Stack>
+    </form>
   );
 }

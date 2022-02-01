@@ -1,33 +1,17 @@
-// @mui
-import { styled } from '@mui/material/styles';
 // layouts
 import Layout from '../layouts';
 // components
 import Page from '../components/Page';
 // sections
-import {
-  HomeHero,
-  HomeMinimal,
-  HomeDarkMode,
-  HomeLookingFor,
-  HomeColorPresets,
-  HomePricingPlans,
-  HomeAdvertisement,
-  HomeCleanInterfaces,
-  HomeHugePackElements,
-} from '../sections/home';
-
-// ----------------------------------------------------------------------
-
-const RootStyle = styled('div')(() => ({
-  height: '100%',
-}));
-
-const ContentStyle = styled('div')(({ theme }) => ({
-  overflow: 'hidden',
-  position: 'relative',
-  backgroundColor: theme.palette.background.default,
-}));
+import Hero from '../sections/landing/Hero';
+import Process from '../sections/landing/Process';
+import About from '../sections/About';
+import Pricing from '../sections/Pricing/Pricing';
+import Newsletter from '../sections/Newsletter';
+import { _pricingMarketing } from '../_mock/_pricing';
+import { Testimonials } from '../sections/testimonials';
+import Features from '../sections/landing/Features';
+import { _coursesByCategories, _testimonials } from '../_mock';
 
 // ----------------------------------------------------------------------
 
@@ -39,27 +23,14 @@ HomePage.getLayout = function getLayout(page) {
 
 export default function HomePage() {
   return (
-    <Page title="The starting point for your next project">
-      <RootStyle>
-        <HomeHero />
-        <ContentStyle>
-          <HomeMinimal />
-
-          <HomeHugePackElements />
-
-          <HomeDarkMode />
-
-          <HomeColorPresets />
-
-          <HomeCleanInterfaces />
-
-          <HomePricingPlans />
-
-          <HomeLookingFor />
-
-          <HomeAdvertisement />
-        </ContentStyle>
-      </RootStyle>
+    <Page title="Tier3-Engineers">
+      <Hero />
+      <About />
+      <Process />
+      <Features  categories={_coursesByCategories} />
+      <Pricing plans={_pricingMarketing} />
+      <Testimonials testimonials={_testimonials} />
+      <Newsletter />
     </Page>
   );
 }

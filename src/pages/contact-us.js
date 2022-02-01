@@ -1,47 +1,56 @@
 // @mui
 import { styled } from '@mui/material/styles';
-import { Grid, Container } from '@mui/material';
+import { Grid, Container, Typography } from '@mui/material';
+// config
 // layouts
 import Layout from '../layouts';
 // components
 import Page from '../components/Page';
-// sections
-import { ContactHero, ContactForm, ContactMap } from '../sections/contact';
+import ContactInfo from '../sections/contact/ContactInfo';
+import ContactForm from '../sections/contact/ContactForm';
+import Newsletter from '../sections/Newsletter';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  paddingTop: theme.spacing(8),
+  paddingTop: 44,
   [theme.breakpoints.up('md')]: {
-    paddingTop: theme.spacing(11),
+    paddingTop: 66,
   },
 }));
 
 // ----------------------------------------------------------------------
 
-Contact.getLayout = function getLayout(page) {
-  return <Layout variant="main">{page}</Layout>;
-};
-
-// ----------------------------------------------------------------------
-
-export default function Contact() {
+export default function ContactUs() {
   return (
-    <Page title="Contact us">
+    <Page title="Contact Us | Tier3-Engineers">
       <RootStyle>
-        <ContactHero />
-
-        <Container sx={{ my: 10 }}>
-          <Grid container spacing={10}>
-            <Grid item xs={12} md={6}>
-              <ContactForm />
+        <Container sx={{ py: { xs: 8, md: 10 } }}>
+          <Grid
+            container
+            spacing={{ xs: 8, md: 3 }}
+            justifyContent="space-between"
+            direction={{ xs: 'column-reverse', md: 'row' }}
+          >
+            <Grid item xs={12} md={6} lg={5}>
+              <ContactInfo />
             </Grid>
-            <Grid item xs={12} md={6}>
-              <ContactMap />
+
+            <Grid item xs={12} md={6} lg={6}>
+              <Typography variant="h2" sx={{ mb: 5 }}>
+                Ready To Get Started?
+              </Typography>
+              <ContactForm />
             </Grid>
           </Grid>
         </Container>
+        <Newsletter />
       </RootStyle>
     </Page>
   );
 }
+
+// ----------------------------------------------------------------------
+ContactUs.getLayout = function getLayout(page) {
+  return <Layout variant="main">{page}</Layout>;
+};

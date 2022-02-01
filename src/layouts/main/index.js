@@ -7,7 +7,7 @@ import { Box, Link, Container, Typography, Stack } from '@mui/material';
 import Logo from '../../components/Logo';
 //
 import MainFooter from './MainFooter';
-import MainHeader from './MainHeader';
+import {Header} from '../header';
 
 // ----------------------------------------------------------------------
 
@@ -22,7 +22,7 @@ export default function MainLayout({ children }) {
 
   return (
     <Stack sx={{ minHeight: 1 }}>
-      <MainHeader />
+      <Header />
 
       {children}
 
@@ -45,7 +45,7 @@ export default function MainLayout({ children }) {
             <Typography variant="caption" component="p">
               © All rights reserved
               <br /> made by &nbsp;
-              <Link href="https://minimals.cc/">minimals.cc</Link>
+              <Link href="https://www.webers-droid.com/">WebDroid</Link>
             </Typography>
           </Container>
         </Box>
