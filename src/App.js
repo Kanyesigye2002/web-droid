@@ -17,7 +17,7 @@ import { ProgressBarStyle } from './components/LoadingScreen';
 import ReactGA from 'react-ga';
 
 // ----------------------------------------------------------------------
-ReactGA.initialize('G-XGPHD35Y80');
+ReactGA.initialize('UA-248073424-1');
 
 export default function App() {
 
