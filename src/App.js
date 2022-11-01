@@ -14,10 +14,14 @@ import ThemePrimaryColor from './components/ThemePrimaryColor';
 import ThemeLocalization from './components/ThemeLocalization';
 import { BaseOptionChartStyle } from './components/charts/BaseOptionChart';
 import { ProgressBarStyle } from './components/LoadingScreen';
+import ReactGA from 'react-ga';
 
 // ----------------------------------------------------------------------
+ReactGA.initialize('G-XGPHD35Y80');
 
 export default function App() {
+
+  ReactGA.pageview(window.location.pathname + window.location.search);
 
   return (
     <ThemeConfig>
